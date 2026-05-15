@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/inventory.xsl"?>
+<!DOCTYPE inventory SYSTEM "inventory.dtd">
+
+<inventory
+    xmlns="http://www.plpasig.com/inventory"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.plpasig.com/inventory inventory.xsd">
+
+    <!-- LABORATORY (7 items) -->
+    <item id="INV-LAB-001" category="Laboratory">
+        <name>Digital Microscope</name>
+        <quantity>15</quantity>
+        <status>Available</status>
+        <last_update>2026-05-10</last_update>
+    </item>
+
+    <item id="INV-LAB-002" category="Laboratory">
+        <name>Centrifuge Machine</name>
+        <quantity>0</quantity>
+        <status>Out of Stock</status>
+        <last_update>2026-05-08</last_update>
+    </item>
+
+    <item id="INV-LAB-003" category="Laboratory">
+        <name>Glass Beaker Set</name>
+        <quantity>11</quantity>
+        <status>Available</status>
+        <last_update>2026-05-12</last_update>
+    </item>
+
+    <item id="INV-LAB-004" category="Laboratory">
+        <name>Magnetic Stirrer</name>
+        <quantity>4</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-14</last_update>
+    </item>
+
+    <item id="INV-LAB-005" category="Laboratory">
+        <name>Petri Dishes (Pack of 50)</name>
+        <quantity>25</quantity>
+        <status>Available</status>
+        <last_update>2026-05-05</last_update>
+    </item>
+
+    <item id="INV-LAB-006" category="Laboratory">
+        <name>PH Meter</name>
+        <quantity>2</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-01</last_update>
+    </item>
+
+    <item id="INV-LAB-007" category="Laboratory">
+        <name>Bunsen Burner</name>
+        <quantity>12</quantity>
+        <status>Available</status>
+        <last_update>2026-04-20</last_update>
+    </item>
+
+    <!-- MULTIMEDIA (5 items) -->
+    <item id="INV-MUL-001" category="Multimedia">
+        <name>LCD Projector</name>
+        <quantity>8</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-01</last_update>
+    </item>
+
+    <item id="INV-MUL-002" category="Multimedia">
+        <name>Wireless Access Point</name>
+        <quantity>6</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-11</last_update>
+    </item>
+
+    <item id="INV-MUL-003" category="Multimedia">
+        <name>DSLR Camera</name>
+        <quantity>6</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-13</last_update>
+    </item>
+
+    <item id="INV-MUL-004" category="Multimedia">
+        <name>Tripod Stand</name>
+        <quantity>12</quantity>
+        <status>Available</status>
+        <last_update>2026-04-28</last_update>
+    </item>
+
+    <item id="INV-MUL-005" category="Multimedia">
+        <name>Condenser Microphone</name>
+        <quantity>0</quantity>
+        <status>Out of Stock</status>
+        <last_update>2026-05-02</last_update>
+    </item>
+
+    <!-- OFFICE (6 items) -->
+    <item id="INV-OFF-001" category="Office">
+        <name>Ergonomic Chair</name>
+        <quantity>12</quantity>
+        <status>Available</status>
+        <last_update>2026-04-25</last_update>
+    </item>
+
+    <item id="INV-OFF-002" category="Office">
+        <name>Heavy Duty Stapler</name>
+        <quantity>1</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-05</last_update>
+    </item>
+
+    <item id="INV-OFF-003" category="Office">
+        <name>Paper Shredder</name>
+        <quantity>3</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-09</last_update>
+    </item>
+
+    <item id="INV-OFF-004" category="Office">
+        <name>Whiteboard Markers (Set)</name>
+        <quantity>40</quantity>
+        <status>Available</status>
+        <last_update>2026-05-13</last_update>
+    </item>
+
+    <item id="INV-OFF-005" category="Office">
+        <name>Filing Cabinet</name>
+        <quantity>0</quantity>
+        <status>Out of Stock</status>
+        <last_update>2026-05-01</last_update>
+    </item>
+
+    <item id="INV-OFF-006" category="Office">
+        <name>Laminating Machine</name>
+        <quantity>2</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-04-15</last_update>
+    </item>
+
+    <!-- SPORTS (4 items) -->
+    <item id="INV-SPO-001" category="Sports">
+        <name>Basketball (Size 7)</name>
+        <quantity>0</quantity>
+        <status>Out of Stock</status>
+        <last_update>2026-05-02</last_update>
+    </item>
+
+    <item id="INV-SPO-002" category="Sports">
+        <name>Volleyball Net</name>
+        <quantity>5</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-09</last_update>
+    </item>
+
+    <item id="INV-SPO-003" category="Sports">
+        <name>Tennis Racket</name>
+        <quantity>18</quantity>
+        <status>Available</status>
+        <last_update>2026-05-11</last_update>
+    </item>
+
+    <item id="INV-SPO-004" category="Sports">
+        <name>Shuttlecock (Tube of 12)</name>
+        <quantity>30</quantity>
+        <status>Available</status>
+        <last_update>2026-05-14</last_update>
+    </item>
+
+    <!-- ELECTRONICS (5 items) -->
+    <item id="INV-ELE-001" category="Electronics">
+        <name>Soldering Station</name>
+        <quantity>4</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-07</last_update>
+    </item>
+
+    <item id="INV-ELE-002" category="Electronics">
+        <name>Multimeter</name>
+        <quantity>14</quantity>
+        <status>Available</status>
+        <last_update>2026-05-10</last_update>
+    </item>
+
+    <item id="INV-ELE-003" category="Electronics">
+        <name>Oscilloscope</name>
+        <quantity>1</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-04-29</last_update>
+    </item>
+
+    <item id="INV-ELE-004" category="Electronics">
+        <name>Breadboards (Pack of 5)</name>
+        <quantity>22</quantity>
+        <status>Available</status>
+        <last_update>2026-05-12</last_update>
+    </item>
+
+    <item id="INV-ELE-005" category="Electronics">
+        <name>Arduino Uno Rev3</name>
+        <quantity>0</quantity>
+        <status>Out of Stock</status>
+        <last_update>2026-05-14</last_update>
+    </item>
+
+    <!-- MAINTENANCE (3 items) -->
+    <item id="INV-MAI-001" category="Maintenance">
+        <name>Power Drill</name>
+        <quantity>3</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-03</last_update>
+    </item>
+
+    <item id="INV-MAI-002" category="Maintenance">
+        <name>Vacuum Cleaner (Industrial)</name>
+        <quantity>1</quantity>
+        <status>Low Stock</status>
+        <last_update>2026-05-06</last_update>
+    </item>
+
+    <item id="INV-MAI-003" category="Maintenance">
+        <name>Step Ladder</name>
+        <quantity>11</quantity>
+        <status>Available</status>
+        <last_update>2026-05-13</last_update>
+    </item>
+
+</inventory>

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-background: #f4f6fb;
+    --color-surface: #ffffff;
+
+    --color-primary: #185fa5;
+    --color-accent: #ef9f27;
+    --color-highlight: #534ab7;
+
+    --color-text: #333333;
+    --color-text-muted: #666666;
+
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-error: #dc3545;
+
+    --color-border: #dddddd;
+
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    min-height: 100vh;
+
+    font-family: var(--font-body);
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    grid-area: 2 / 2 / 3 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    padding: 2em 8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    border-spacing: 0;
+}
+
+svg {
+    height: 1.5em;
+    width: 1.5em;
+}

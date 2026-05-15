@@ -1,0 +1,15 @@
+<!ELEMENT inventory (item+)>
+<!ATTLIST inventory
+    xmlns CDATA #REQUIRED
+    xmlns:xsi CDATA #REQUIRED
+    xsi:schemaLocation CDATA #REQUIRED>
+
+<!ELEMENT item (name, quantity, status, last_update)>
+<!ATTLIST item
+    id ID #REQUIRED
+    category CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT last_update (#PCDATA)>

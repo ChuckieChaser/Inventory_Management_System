@@ -1,0 +1,239 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    background-color: var(--color-surface);
+
+    width: 100%;
+
+    padding: 2em;
+
+    border: 1px solid var(--color-border);
+    border-radius: 1em;
+}
+
+.table__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.table__header-greet {
+    flex: 999 1 20rem;
+    min-width: 0;
+}
+
+.table__header-greet span {
+    color: var(--color-text-muted);
+}
+
+.table__header-search {
+    flex: 1 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    margin-left: auto;
+}
+
+.search__textfield {
+    position: relative;
+
+    width: 15em;
+
+    &:has(input:hover) {
+        svg {
+            color: var(--color-primary);
+        }
+
+        input {
+            border-color: var(--color-primary);
+        }
+    }
+
+    &:has(input:focus) {
+        svg {
+            color: var(--color-primary);
+        }
+
+        input {
+            border-color: var(--color-primary);
+        }
+    }
+}
+
+.search__textfield svg {
+    pointer-events: none;
+
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+
+    transform: translateY(-50%);
+
+    transition: 0.3s ease-in-out;
+}
+
+.search__textfield input {
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    padding: 0.5em 0.5em 0.5em 2em;
+
+    border: 1px solid var(--color-border);
+    border-radius: 0.5em;
+
+    outline: none;
+
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+
+    &::placeholder {
+        color: var(--color-text-muted);
+    }
+}
+
+.table__header-search button {
+    cursor: pointer;
+
+    background-color: var(--color-primary);
+    color: var(--color-background);
+
+    padding: 0.5em 1.5em;
+
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5em;
+
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-background);
+        color: var(--color-primary);
+    }
+}
+
+.table__content {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5em;
+}
+
+.table__content table {
+    overflow: hidden;
+    table-layout: auto;
+}
+
+.table__content table th,
+.table__content table td {
+    text-align: left;
+    white-space: normal;
+
+    &:nth-child(3) {
+        min-width: 20em;
+    }
+
+    &:not(:nth-child(3)) {
+        width: 1%;
+        white-space: nowrap;
+    }
+
+    &:not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(5)) {
+        text-align: center;
+    }
+}
+
+.table__content table thead {
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table__content table thead tr th {
+    color: var(--color-primary);
+    padding: 0.75em 1.5em;
+}
+
+.table__content table tbody tr {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:has(td[data-status='Out of Stock']) {
+        background-color: color-mix(in srgb, var(--color-error), transparent 75%);
+    }
+
+    &:nth-child(even) {
+        background-color: color-mix(in srgb, var(--color-background), transparent 25%);
+    }
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--color-primary), transparent 75%) !important;
+    }
+}
+
+.table__content table tbody tr td {
+    padding: 0.75em 1.5em;
+
+    &[data-status='Available'] {
+        color: var(--color-success);
+
+        .status__badge {
+            background-color: color-mix(in srgb, var(--color-success), transparent 75%);
+        }
+
+        .status__badge .status__badge-icon {
+            background-color: var(--color-success);
+        }
+    }
+
+    &[data-status='Low Stock'] {
+        color: var(--color-warning);
+
+        .status__badge {
+            background-color: color-mix(in srgb, var(--color-warning), transparent 75%);
+        }
+
+        .status__badge .status__badge-icon {
+            background-color: var(--color-warning);
+        }
+    }
+
+    &[data-status='Out of Stock'] {
+        color: var(--color-error);
+
+        .status__badge {
+            background-color: color-mix(in srgb, var(--color-error), transparent 75%);
+        }
+
+        .status__badge .status__badge-icon {
+            background-color: var(--color-error);
+        }
+    }
+
+    & .status__badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+
+        background-color: var(--color-border);
+
+        width: fit-content;
+
+        padding: 0.125em 0.5em;
+        border-radius: 0.25em;
+    }
+
+    & .status__badge .status__badge-icon {
+        background-color: var(--color-success);
+
+        height: 0.5em;
+        width: 0.5em;
+
+        border-radius: 50%;
+    }
+}

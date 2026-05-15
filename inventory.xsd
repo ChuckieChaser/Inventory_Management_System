@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+    xmlns="http://www.plpasig.com/inventory"
+    targetNamespace="http://www.plpasig.com/inventory"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    elementFormDefault="qualified"
+    vc:minVersion="1.1">
+
+    <xs:element name="inventory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="item" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="name" type="xs:string"/>
+
+                            <xs:element name="quantity">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="status">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Available"/>
+                                        <xs:enumeration value="Low Stock"/>
+                                        <xs:enumeration value="Out of Stock"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="last_update" type="xs:date"/>
+                        </xs:sequence>
+
+                        <xs:attribute name="id" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="INV-[A-Z]{3}-\d{3}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                        <xs:attribute name="category" use="required" type="xs:string"/>
+
+                        <xs:assert test="if (quantity = 0) then (status = 'Out of Stock') else true()"/>
+                        <xs:assert test="if (quantity &gt; 0 and quantity &lt;= 10) then (status = 'Low Stock') else true()"/>
+                        <xs:assert test="if (quantity &gt; 10) then (status = 'Available') else true()"/>
+
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

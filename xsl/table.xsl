@@ -38,7 +38,6 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Index</th>
                             <th>Item ID</th>
                             <th>Name</th>
                             <th>Quantity</th>
@@ -49,10 +48,6 @@
                     <tbody>
                         <xsl:for-each select="//inventory:item">
                             <tr>
-                                <td>
-                                    <xsl:value-of select="position()"/>
-                                </td>
-
                                 <td>
                                     <xsl:value-of select="@id"/>
                                 </td>

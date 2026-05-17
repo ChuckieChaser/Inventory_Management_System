@@ -97,6 +97,26 @@
                     </div>
                 </div>
             </div>
+
+            <div class="status__category">
+                <h2>Item Categories</h2>
+
+                <div class="status__category-container">
+                    <xsl:for-each select="//inventory:item[not(@category = preceding::inventory:item/@category)]">
+                        <xsl:variable name="currentCategory" select="@category"/>
+
+                        <div class="container__item">
+                            <span>
+                                <xsl:value-of select="$currentCategory"/>
+                            </span>
+
+                            <span>
+                                <xsl:value-of select="count(//inventory:item[@category = $currentCategory])"/> Items
+                            </span>
+                        </div>
+                    </xsl:for-each>
+                </div>
+            </div>
         </section>
     </xsl:template>
 

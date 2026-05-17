@@ -53,15 +53,6 @@ Get all the items ready for iteration in the inventory.xml
 
 ---
 
-Get the current position of the fetched item
-
-```
-# from table.xsl
-<xsl:value-of select="position()"/>
-```
-
----
-
 Get the value of attribute named "id" in the fetched item
 
 ```

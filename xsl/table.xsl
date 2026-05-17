@@ -27,10 +27,10 @@
                             <use href="assets/icon/icons.svg#icon-search"></use>
                         </svg>
 
-                        <input type="text" placeholder="Search for an item"/>
+                        <input id="searchTextfield" type="text" placeholder="Search for an item"/>
                     </div>
 
-                    <button>Search</button>
+                    <button id="searchButton">Search</button>
                 </div>
             </header>
 
@@ -46,7 +46,7 @@
                             <th>Last Updated</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tableContent">
                         <xsl:for-each select="//inventory:item">
                             <tr>
                                 <td>

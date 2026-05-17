@@ -42,7 +42,7 @@
 .search__textfield {
     position: relative;
 
-    width: 15em;
+    width: 20em;
 
     &:has(input:hover) {
         svg {

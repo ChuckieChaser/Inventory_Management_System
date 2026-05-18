@@ -24,6 +24,8 @@
                 <link rel="stylesheet" type="text/css" href="../css/header.css"/>
                 <link rel="stylesheet" type="text/css" href="../css/status.css"/>
                 <link rel="stylesheet" type="text/css" href="../css/table.css"/>
+
+                <script src="../js/table.js" defer="defer"></script>
             </head>
 
             <body>

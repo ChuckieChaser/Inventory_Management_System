@@ -103,6 +103,7 @@
 
                 <div class="status__category-container">
                     <xsl:for-each select="//inventory:item[not(@category = preceding::inventory:item/@category)]">
+                        <xsl:sort select="@id" data-type="text" order="ascending"/>
                         <xsl:variable name="currentCategory" select="@category"/>
 
                         <div class="container__item">

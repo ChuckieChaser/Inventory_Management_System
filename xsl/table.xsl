@@ -30,7 +30,11 @@
                         <input type="text" placeholder="Search for an item"/>
                     </div>
 
-                    <button>Search</button>
+                    <button>
+                        <svg>
+                            <use href="assets/icon/icons.svg#icon-reset"></use>
+                        </svg>
+                    </button>
                 </div>
             </header>
 
@@ -47,6 +51,8 @@
                     </thead>
                     <tbody>
                         <xsl:for-each select="//inventory:item">
+                            <xsl:sort select="@id" data-type="text" order="ascending"/>
+
                             <tr>
                                 <td>
                                     <xsl:value-of select="@id"/>
@@ -75,6 +81,12 @@
                                 </td>
                             </tr>
                         </xsl:for-each>
+
+                        <tr class="empty__row" style="display: none;">
+                            <td colspan="5">
+                                No items match your search or filters.
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

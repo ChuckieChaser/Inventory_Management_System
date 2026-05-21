@@ -7,7 +7,7 @@
 
         <aside id="sidebar" class="sidebar">
             <div class="sidebar__logo">
-                <img src="../assets/img/logo.png" alt="Logo"/>
+                <img src="../assets/img/logo.jpg" alt="Logo"/>
 
                 <h2>
                     <xsl:value-of select="$title"/>
